@@ -1,5 +1,12 @@
 package com.example.chesscheckers;
 
+import java.util.List;
+
 public class CheckersPiece extends Piece {
-    private boolean isKing;
+    public boolean crowned = false;
+
+    @Override
+    public List<int[]> getAllMoves() {
+        return null;
+    }
 }

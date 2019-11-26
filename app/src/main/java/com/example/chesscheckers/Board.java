@@ -6,8 +6,7 @@ package com.example.chesscheckers;
  * with checkWinCondition and so on.
  */
 public abstract class Board {
-    private int team1pieces;
-    public void highlightPiece(Object a) {
+    public void highlightPiece(Piece a) {
         /**
          * passed an object or piece (preferably the latter)
          * and fills that square another color to indicate selection
@@ -19,6 +18,7 @@ public abstract class Board {
         /**
          * called when UI initially needs to be setup onCreate.
          */
+
     }
 
     /**
