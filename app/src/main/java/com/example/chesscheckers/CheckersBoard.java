@@ -29,6 +29,7 @@ public class CheckersBoard extends Board {
         /**
          * white piece setup
          */
+
     }
     @Override
     public boolean checkWinCondition(int teamId) {

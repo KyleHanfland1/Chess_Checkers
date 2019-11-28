@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class King extends Piece {
+    String team;
+    public King(String setTeam) {
+        team = setTeam;
+    }
     /**
      * WIN CONDITION FOR CHESS
      * if he cannot be saved that's checkmate, and game
