@@ -9,7 +9,7 @@ public class CheckersBoard extends Board {
      * empty squares == 0
      * starts from top to bottom
      */
-    private int[][] boardPositions = new int[Constants.Board.numSquares][Constants.Board.numSquares];
+    private CheckersPiece[][] boardPositions = new CheckersPiece[][][Constants.Board.numSquares][Constants.Board.numSquares];
     public CheckersBoard() {
         /**
          * black piece setup
@@ -29,7 +29,6 @@ public class CheckersBoard extends Board {
         /**
          * white piece setup
          */
-
     }
     @Override
     public boolean checkWinCondition(int teamId) {
