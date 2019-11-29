@@ -20,7 +20,7 @@ public abstract class Board {
          */
 
     }
-    public void updateUI {
+    public void updateUI() {
         /**
          * updates every time move made, instead of restarting whole board with setUpUI.
          */

@@ -20,7 +20,7 @@ public abstract class Piece {
          */
 
     public int getX() {
-        return x;
+        return ;
     }
     public int getY() {
         return y;

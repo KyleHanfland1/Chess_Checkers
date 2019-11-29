@@ -29,6 +29,21 @@ public class CheckersBoard extends Board {
         /**
          * white piece setup
          */
+        boardPositions[0][6] = 1;
+        boardPositions[1][5] = 1;
+        boardPositions[1][7] = 1;
+        boardPositions[2][6] = 1;
+        boardPositions[3][5] = 1;
+        boardPositions[3][7] = 1;
+        boardPositions[4][6] = 1;
+        boardPositions[5][5] = 1;
+        boardPositions[5][7] = 1;
+        boardPositions[6][6] = 1;
+        boardPositions[7][5] = 1;
+        boardPositions[7][7] = 1;
+
+
+
 
     }
     @Override
@@ -45,7 +60,13 @@ public class CheckersBoard extends Board {
         }
         return false;
     }
-    public void crown(CheckersPiece piece) {
+    public void isCrowned(CheckersPiece piece) {
+        // if (piece Constants.TeamId.team1Id)
+        // for (int i = 0; i < boardPositions.length; i++) {
+        // if (boardPositions[i].length == 7) {
+        // piece.crowned == true;
+            }
+        }
         /**
          * somehow designates piece to be special so that it can go backwards maybe two different
          * arrays or a instance variable boolean for checkers pieces
