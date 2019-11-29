@@ -20,7 +20,7 @@ public abstract class Piece {
          */
 
     public int getX() {
-        return ;
+        return this.x;
     }
     public int getY() {
         return y;
@@ -34,9 +34,17 @@ public abstract class Piece {
         return y;
     }
     public int[] move(int x, int y) {
+        boolean possible = false;
         /**
          * passed the x - y coords of a click/tap
          * first make sure move is in the list of possible moves
+         */
+        for (int i = 0; i < getAllMoves().size(); i++) {
+            if (new int[] {x, y}.equals(getAllMoves().get(i))) {
+                possible = true;
+            }
+        }
+        /**
          * then change the x - y coords of the piece
          * update the UI to remove the highlighted squares then move the piece
          * if chess and shared square you take a piece
@@ -46,6 +54,9 @@ public abstract class Piece {
          * if this is too high up in the tree you can override this implementation or update it
          * to fit specific pieces if its not working for some reason
          */
+        if (possible) {
+
+        }
 
         return null;
     }
