@@ -14,7 +14,7 @@ public class ChessBoard extends Board {
         /**
          * following are white pieces
          */
-        boardPositions[0][1] = new Rook();
+        boardPositions[0][1] = 2;
         boardPositions[0][2] = 2;
         boardPositions[1][1] = 2;
         boardPositions[1][2] = 2;
