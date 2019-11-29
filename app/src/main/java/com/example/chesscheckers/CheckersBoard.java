@@ -11,10 +11,10 @@ public class CheckersBoard extends Board {
         /**
          * black piece setup
          */
-        boardPositions[0][1] = new CheckersPiece(0, 0, 1);
-        boardPositions[0][3] = new CheckersPiece(0, 0 , 3);
-        boardPositions[0][5] = new CheckersPiece(0, 0 , 5);
-        boardPositions[0][7] = new CheckersPiece(0, 0 , 7);
+        boardPositions[0][1] = new CheckersPiece(0, 1, 0);
+        boardPositions[0][3] = new CheckersPiece(0, 3 , 0);
+        boardPositions[0][5] = new CheckersPiece(0, 5 , 0);
+        boardPositions[0][7] = new CheckersPiece(0, 7 , 0);
         boardPositions[2][1] = new CheckersPiece(0, 2, 1);
         boardPositions[2][3] = new CheckersPiece(0, 2, 3);
         boardPositions[2][5] = new CheckersPiece(0, 2, 5);
