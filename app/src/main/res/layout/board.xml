@@ -34,8 +34,8 @@
 
         <ImageView
             android:id="@+id/checkerBoard"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="381dp"
+            android:layout_height="508dp"
             app:layout_column="0"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
