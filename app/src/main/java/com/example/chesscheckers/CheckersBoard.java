@@ -4,47 +4,28 @@ public class CheckersBoard extends Board {
     private int numPieces0 = Constants.Checkers.numStartPieces;
     private int numPieces1 = Constants.Checkers.numStartPieces;
     /**
-     * board positions stores black team as a 1 in the array
-     * stores white team as 2
-     * empty squares == 0
      * starts from top to bottom
      */
-    private int[][] boardPositions = new int[Constants.Board.numSquares][Constants.Board.numSquares];
+    private CheckersPiece[][] boardPositions = new CheckersPiece[Constants.Board.numSquares][Constants.Board.numSquares];
     public CheckersBoard() {
         /**
          * black piece setup
          */
-        boardPositions[0][1] = 2;
-        boardPositions[0][3] = 2;
-        boardPositions[0][5] = 2;
-        boardPositions[0][7] = 2;
-        boardPositions[2][1] = 2;
-        boardPositions[2][3] = 2;
-        boardPositions[2][5] = 2;
-        boardPositions[2][7] = 2;
-        boardPositions[1][0] = 2;
-        boardPositions[1][2] = 2;
-        boardPositions[1][4] = 2;
-        boardPositions[1][6] = 2;
+        boardPositions[0][1] = new CheckersPiece(0, 0, 1);
+        boardPositions[0][3] = new CheckersPiece(0, 0 , 3);
+        boardPositions[0][5] = new CheckersPiece(0, 0 , 5);
+        boardPositions[0][7] = new CheckersPiece(0, 0 , 7);
+        boardPositions[2][1] = new CheckersPiece(0, 2, 1);
+        boardPositions[2][3] = new CheckersPiece(0, 2, 3);
+        boardPositions[2][5] = new CheckersPiece(0, 2, 5);
+        boardPositions[2][7] = new CheckersPiece(0, 2, 7);
+        boardPositions[1][0] = new CheckersPiece(0, 1, 0);
+        boardPositions[1][2] = new CheckersPiece(0, 1, 2);
+        boardPositions[1][4] = new CheckersPiece(0, 1, 4);
+        boardPositions[1][6] = new CheckersPiece(0, 1, 6);
         /**
          * white piece setup
          */
-        boardPositions[0][6] = 1;
-        boardPositions[1][5] = 1;
-        boardPositions[1][7] = 1;
-        boardPositions[2][6] = 1;
-        boardPositions[3][5] = 1;
-        boardPositions[3][7] = 1;
-        boardPositions[4][6] = 1;
-        boardPositions[5][5] = 1;
-        boardPositions[5][7] = 1;
-        boardPositions[6][6] = 1;
-        boardPositions[7][5] = 1;
-        boardPositions[7][7] = 1;
-
-
-
-
     }
     @Override
     public boolean checkWinCondition(int teamId) {
@@ -60,13 +41,7 @@ public class CheckersBoard extends Board {
         }
         return false;
     }
-    public void isCrowned(CheckersPiece piece) {
-        // if (piece Constants.TeamId.team1Id)
-        // for (int i = 0; i < boardPositions.length; i++) {
-        // if (boardPositions[i].length == 7) {
-        // piece.crowned == true;
-            }
-        }
+    public static void crown(CheckersPiece piece) {
         /**
          * somehow designates piece to be special so that it can go backwards maybe two different
          * arrays or a instance variable boolean for checkers pieces

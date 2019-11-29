@@ -14,22 +14,22 @@ public class ChessBoard extends Board {
         /**
          * following are white pieces
          */
-        boardPositions[0][1] = 2;
-        boardPositions[0][2] = 2;
-        boardPositions[1][1] = 2;
-        boardPositions[1][2] = 2;
-        boardPositions[2][1] = 2;
-        boardPositions[2][2] = 2;
-        boardPositions[3][1] = 2;
-        boardPositions[3][2] = 2;
-        boardPositions[4][1] = 2;
-        boardPositions[4][2] = 2;
-        boardPositions[5][1] = 2;
-        boardPositions[5][2] = 2;
-        boardPositions[6][1] = 2;
-        boardPositions[6][2] = 2;
-        boardPositions[7][1] = 2;
-        boardPositions[7][2] = 2;
+        //boardPositions[0][1] = new Rook();
+        //boardPositions[0][2] = 2;
+       // boardPositions[1][1] = 2;
+        //boardPositions[1][2] = 2;
+        //boardPositions[2][1] = 2;
+        //boardPositions[2][2] = 2;
+        //boardPositions[3][1] = 2;
+        //boardPositions[3][2] = 2;
+        //boardPositions[4][1] = 2;
+        //boardPositions[4][2] = 2;
+        //boardPositions[5][1] = 2;
+        //boardPositions[5][2] = 2;
+        //boardPositions[6][1] = 2;
+        //boardPositions[6][2] = 2;
+        //boardPositions[7][1] = 2;
+        //boardPositions[7][2] = 2;
 
 
         /**
