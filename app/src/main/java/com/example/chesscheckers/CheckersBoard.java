@@ -26,6 +26,18 @@ public class CheckersBoard extends Board {
         /**
          * white piece setup
          */
+        boardPositions[0][5] = new CheckersPiece(1, 0, 5);
+        boardPositions[2][5] = new CheckersPiece(1, 2, 5);
+        boardPositions[4][5] = new CheckersPiece(1, 4, 5);
+        boardPositions[6][5] = new CheckersPiece(1, 6, 5);
+        boardPositions[1][6] = new CheckersPiece(1, 1, 6);
+        boardPositions[3][6] = new CheckersPiece(1, 3, 6);
+        boardPositions[5][6] = new CheckersPiece(1, 5, 6);
+        boardPositions[7][6] = new CheckersPiece(1, 7, 6);
+        boardPositions[0][7] = new CheckersPiece(1, 0, 7);
+        boardPositions[2][7] = new CheckersPiece(1, 2, 7);
+        boardPositions[4][7] = new CheckersPiece(1, 4, 7);
+        boardPositions[6][7] = new CheckersPiece(1, 6, 7);
     }
     @Override
     public boolean checkWinCondition(int teamId) {
