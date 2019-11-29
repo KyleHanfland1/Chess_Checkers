@@ -8,6 +8,8 @@ public class CheckersPiece extends Piece {
     public int team;
     public CheckersPiece(int teamId, int x, int y) {
         team = teamId;
+        this.setX(x);
+        this.setY(y);
     }
     @Override
     public List<int[]> getAllMoves() {
