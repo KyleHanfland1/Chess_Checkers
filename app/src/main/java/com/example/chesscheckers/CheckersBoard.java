@@ -38,6 +38,9 @@ public class CheckersBoard extends Board {
         boardPositions[2][7] = new CheckersPiece(1, 2, 7);
         boardPositions[4][7] = new CheckersPiece(1, 4, 7);
         boardPositions[6][7] = new CheckersPiece(1, 6, 7);
+        /**
+         * board positions array set up for initial part of the game
+         */
     }
     @Override
     public boolean checkWinCondition(int teamId) {

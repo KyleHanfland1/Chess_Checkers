@@ -33,7 +33,7 @@ public abstract class Piece {
         y = b;
         return y;
     }
-    public int[] move(int[] a) {
+    public int[] move(int x, int y) {
         /**
          * passed the x - y coords of a click/tap
          * first make sure move is in the list of possible moves
@@ -46,6 +46,7 @@ public abstract class Piece {
          * if this is too high up in the tree you can override this implementation or update it
          * to fit specific pieces if its not working for some reason
          */
+
         return null;
     }
 
