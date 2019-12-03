@@ -16,7 +16,7 @@
         android:layout_marginTop="130dp"
         android:layout_marginEnd="105dp"
         android:layout_marginRight="105dp"
-        android:text="Select Game Mode"
+        android:text="Welcome!"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,27 +31,10 @@
         android:layout_marginTop="91dp"
         android:layout_marginEnd="175dp"
         android:layout_marginRight="175dp"
-        android:layout_marginBottom="60dp"
-        android:text="Checkers"
-        app:layout_constraintBottom_toTopOf="@+id/chessButton"
+        android:text="Play Checkers Game"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.296"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <Button
-        android:id="@+id/chessButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="149dp"
-        android:layout_marginLeft="149dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="175dp"
-        android:layout_marginRight="175dp"
-        android:layout_marginBottom="268dp"
-        android:text="Chess"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkersButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>

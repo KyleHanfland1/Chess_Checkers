@@ -2,6 +2,9 @@ package com.example.chesscheckers;
 
 import java.util.List;
 
+import static com.example.chesscheckers.CheckersBoard.whiteTurn;
+
+
 /**
  * abstract class to store what each pieces methods should be.
  */
@@ -43,6 +46,7 @@ public abstract class Piece {
             if (new int[] {x, y}.equals(getAllMoves().get(i))) {
                 possible = true;
             }
+
         }
         /**
          * then change the x - y coords of the piece
@@ -56,7 +60,10 @@ public abstract class Piece {
          */
         if (possible) {
 
+            // flips after move is made
+            whiteTurn = !whiteTurn;
         }
+
 
         return null;
     }

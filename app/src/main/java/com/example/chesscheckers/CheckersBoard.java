@@ -3,6 +3,7 @@ package com.example.chesscheckers;
 public class CheckersBoard extends Board {
     private int numPieces0 = Constants.Checkers.numStartPieces;
     private int numPieces1 = Constants.Checkers.numStartPieces;
+    public static boolean whiteTurn = false;
     /**
      * starts from top to bottom
      */

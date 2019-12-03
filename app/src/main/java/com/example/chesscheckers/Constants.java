@@ -7,9 +7,6 @@ public class Constants {
         //white pieces
         public final static int team2Id = 1;
     }
-    public class Chess {
-        public final static int numStartPieces = 16;
-    }
     public class Checkers {
         public final static int numStartPieces = 12;
     }
