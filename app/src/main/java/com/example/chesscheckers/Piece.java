@@ -44,8 +44,7 @@ public abstract class Piece {
          */
         for (int i = 0; i < getAllMoves().size(); i++) {
             if (new int[] {x, y}.equals(getAllMoves().get(i))) {
-                possible = true;
-            }
+             }
 
         }
         /**
