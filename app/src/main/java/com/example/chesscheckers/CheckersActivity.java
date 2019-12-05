@@ -1,8 +1,7 @@
 package com.example.chesscheckers;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;1
 
-public class CheckersActivity extends AppCompatActivity {
     public void highlightPiece(Piece a) {
         /**
          * passed an object or piece (preferably the latter)
@@ -10,7 +9,9 @@ public class CheckersActivity extends AppCompatActivity {
          * then highlights all moves in the getAllMoves() function of the piece
          * subclasses
          */
+
     }
+
     public void setUpUI() {
         /**
          * called when UI initially needs to be setup onCreate.

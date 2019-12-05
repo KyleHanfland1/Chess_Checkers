@@ -1,5 +1,7 @@
 package com.example.chesscheckers;
 
+import android.widget.Button;
+
 /**
  * generalized game board object for our games.
  * abstract so that ChessBoard and CheckersBoard can have more specificity
@@ -15,4 +17,5 @@ public abstract class Board {
      * @return true if game is over.
      */
     public abstract boolean checkWinCondition(int teamId);
+
 }
