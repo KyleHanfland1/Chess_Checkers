@@ -1,11 +1,18 @@
 package com.example.chesscheckers;
 
 import android.util.DisplayMetrics;
+import android.widget.ImageView;
+
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 public final class AreaDivider {
     private double xDP;
     private double yDP;
     private CheckersBoard board;
+    /**
+     * grab the imageView of the board
+     */
+    //private ImageView imageBoard =
     private double xCellSize = 47.625;
     private double yCellSize = 63.5;
     public AreaDivider(double setxDP, double setyDP, CheckersBoard b) {

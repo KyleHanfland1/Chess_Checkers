@@ -2,7 +2,7 @@ package com.example.chesscheckers;
 
 import androidx.appcompat.app.AppCompatActivity;1
 
-    public void highlightPiece(Piece a) {
+    //public void highlightPiece(Piece a) {
         /**
          * passed an object or piece (preferably the latter)
          * and fills that square another color to indicate selection
@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;1
          * subclasses
          */
 
-    }
+    //}
 
     public void setUpUI() {
         /**
