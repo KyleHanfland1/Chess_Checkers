@@ -5,7 +5,6 @@ import java.util.List;
 
 public class CheckersPiece extends Piece {
     public boolean crowned = false;
-    public int team;
     public CheckersPiece(int teamId, int x, int y) {
         team = teamId;
         this.setX(x);

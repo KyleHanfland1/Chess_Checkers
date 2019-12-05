@@ -14,6 +14,7 @@ public abstract class Piece {
      * Almost all translation between x - y coords to squares on the board should be internal to
      * the board class ! ! ! ! ! ! ! ! ! ! ! ! !
      */
+    public int team;
     private int x;
     private int y;
     public abstract List<int[]> getAllMoves();

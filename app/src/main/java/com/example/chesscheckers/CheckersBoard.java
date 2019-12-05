@@ -1,5 +1,8 @@
 package com.example.chesscheckers;
 
+import android.view.View;
+import android.widget.TextView;
+
 public class CheckersBoard extends Board {
     private int numPieces0 = Constants.Checkers.numStartPieces;
     private int numPieces1 = Constants.Checkers.numStartPieces;
@@ -64,5 +67,16 @@ public class CheckersBoard extends Board {
          * if crowned == true checker can move backward
          */
         piece.crowned = true;
+    }
+    public void pieceTaken(int teamId) {
+        if (teamId == Constants.TeamId.team1Id) {
+            numPieces0--;
+        } else {
+            numPieces1--;
+        }
+        updateScores();
+    }
+    public void updateScores() {
+
     }
 }
