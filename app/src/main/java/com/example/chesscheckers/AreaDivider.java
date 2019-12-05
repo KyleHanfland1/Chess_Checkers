@@ -12,12 +12,16 @@ public final class AreaDivider {
         xDP = setxDP;
         yDP = setyDP;
         CheckersBoard board = b;
-        DisplayMetrics metrics = getResources().getDisplayMetrics();
     }
 
     /**
      *  px = dp * (dpi / 160)
      *  dp = px / (dpi / 160)
+     *  densityFactor = dpi/160
+     *  xcellsize = board.getWidth() will return pixels (i believe then use conversion above)
+     *  y cell size = ImageView board.getHieght() (Once again in pixels)
+     *  Important because this allows for no magic numbers aka accounts for different screen sizes
+     *  on launch
      * @return
      */
     public int getXCoordinateFromBoard() {

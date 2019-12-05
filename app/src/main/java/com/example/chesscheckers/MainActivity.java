@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-
+    public float densityFactor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
         Button checkersButton = findViewById(R.id.checkersButton);
         CheckersPiece piece = new CheckersPiece(1, 4, 4);
         piece.getAllMoves();
+        densityFactor = getResources().getDisplayMetrics().density;
         checkersButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
