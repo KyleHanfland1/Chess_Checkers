@@ -13,8 +13,8 @@ public final class AreaDivider {
     private ImageView imageBoard = MainActivity.checkersboard;
     private int height = imageBoard.getHeight();
     private int width = imageBoard.getWidth();
-    private double xCellSize = width/8;
-    private double yCellSize = height/8;
+    private int xCellSize = width/8;
+    private int yCellSize = height/8;
     public AreaDivider(CheckersBoard b) {
         CheckersBoard board = b;
     }
@@ -34,6 +34,9 @@ public final class AreaDivider {
     }
     public int getYCoordinateFromBoard(int pixel) {
         return (int) Math.floor(pixel / yCellSize);
+    }
+    public int getXCellMiddle(int x) {
+        return ((x * xCellSize) + (int) (.5 * xCellSize));
     }
 
 }
