@@ -6,18 +6,16 @@ import android.widget.ImageView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 public final class AreaDivider {
-    private double xDP;
-    private double yDP;
     private CheckersBoard board;
     /**
      * grab the imageView of the board
      */
-    //private ImageView imageBoard =
-    private double xCellSize = 47.625;
-    private double yCellSize = 63.5;
-    public AreaDivider(double setxDP, double setyDP, CheckersBoard b) {
-        xDP = setxDP;
-        yDP = setyDP;
+    private ImageView imageBoard = MainActivity.checkersboard;
+    private int height = imageBoard.getHeight();
+    private int width = imageBoard.getWidth();
+    private double xCellSize = width/8;
+    private double yCellSize = height/8;
+    public AreaDivider(CheckersBoard b) {
         CheckersBoard board = b;
     }
 
@@ -31,11 +29,11 @@ public final class AreaDivider {
      *  on launch
      * @return
      */
-    public int getXCoordinateFromBoard() {
-        return (int) Math.floor(xDP / 47.625);
+    public int getXCoordinateFromBoard(int pixel) {
+        return (int) Math.floor(pixel/xCellSize);
     }
-    public int getYCoordinateFromBoard() {
-        return (int) Math.floor(yDP / 63.5);
+    public int getYCoordinateFromBoard(int pixel) {
+        return (int) Math.floor(pixel / yCellSize);
     }
 
 }
