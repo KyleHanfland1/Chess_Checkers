@@ -10,7 +10,7 @@ public class CheckersBoard extends Board {
     /**
      * starts from top to bottom
      */
-    private CheckersPiece[][] boardPositions = new CheckersPiece[Constants.Board.numSquares][Constants.Board.numSquares];
+    public CheckersPiece[][] boardPositions = new CheckersPiece[Constants.Board.numSquares][Constants.Board.numSquares];
     public CheckersBoard() {
         /**
          * black piece setup

@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         Button checkersButton = findViewById(R.id.checkersButton);
         CheckersPiece piece = new CheckersPiece(1, 4, 4);
         piece.getAllMoves();
-        checkersboard = findViewById(R.id.checkerboard);
+        checkersboard = findViewById(R.id.CheckersBoard);
         densityFactor = getResources().getDisplayMetrics().density;
 
         checkersButton.setOnClickListener(new View.OnClickListener() {

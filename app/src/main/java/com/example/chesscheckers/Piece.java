@@ -59,6 +59,7 @@ public abstract class Piece {
          * to fit specific pieces if its not working for some reason
          */
         if (possible) {
+            if
 
             // flips after move is made
             whiteTurn = !whiteTurn;
