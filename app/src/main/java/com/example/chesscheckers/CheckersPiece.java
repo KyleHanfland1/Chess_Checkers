@@ -17,6 +17,12 @@ public class CheckersPiece extends Piece {
         this.setX(x);
         this.setY(y);
         imageView = i;
+        i.setOnClickListener(new View.OnClickListener(){
+        @Override
+        public void onClick(View v) {
+            gameBoard.selectedPiece = gameBoard.boardPositions[getX()][getY()];
+            }
+        });
     }
     @Override
     public List<int[]> getAllMoves() {

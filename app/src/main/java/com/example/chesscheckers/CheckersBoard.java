@@ -8,7 +8,7 @@ import android.widget.TextView;
 public class CheckersBoard extends Board {
     private int numPieces0 = Constants.Checkers.numStartPieces;
     private int numPieces1 = Constants.Checkers.numStartPieces;
-    public int lastX, lastY;
+    public CheckersPiece selectedPiece;
     public Activity activity;
     public static boolean whiteTurn = false;
     /**
