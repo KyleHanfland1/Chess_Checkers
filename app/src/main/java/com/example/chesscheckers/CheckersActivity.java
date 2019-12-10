@@ -17,11 +17,11 @@ import androidx.constraintlayout.widget.ConstraintLayout;1
     //}
 public class CheckersActivity extends AppCompatActivity {
 
-
+    public static CheckersBoard gameBoard;
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.board);
-        CheckersBoard gameBoard = new CheckersBoard();
+        gameBoard = new CheckersBoard();
         setUpUI(gameBoard);
 
         }
@@ -34,7 +34,7 @@ public class CheckersActivity extends AppCompatActivity {
         ConstraintLayout gridLayout = findViewById(R.id.gridLayout);
             for (int i = 0; i < checkersBoard.boardPositions.length; i++) {
                 for (int j = 0; i < checkersBoard.boardPositions[i].length; j++){
-                    if ()
+                    if (checkersBoard.boardPositions[i][j] != null)
                     gridLayout.addView(new ImageView(this))
                     if (Constants.TeamId)
                         //make the image, pick its team, add to constraint layout, clone constraint layout into constraint set, do constraint stuff
@@ -60,6 +60,8 @@ public class CheckersActivity extends AppCompatActivity {
          */
 
     }
-
+    public void boardClicked(ImageView v) {
+        v.layout((int) v.getX(),(int) v.getY(),(int) v.getX() + v.getWidth(),(int) v.getY() + v.getHeight());
+    }
 
 }

@@ -29,6 +29,7 @@
             android:layout_height="488dp"
             android:adjustViewBounds="false"
             android:cropToPadding="false"
+            android:onClick="boardClicked"
             app:layout_column="0"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
