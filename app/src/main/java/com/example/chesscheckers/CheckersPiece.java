@@ -131,31 +131,48 @@ public class CheckersPiece extends Piece {
             if (board.boardPositions[x][y].team == this.team) {
                 return false;
             }
-            if (Math.abs(this.getX()-x) == 2 && gameBoard.boardPositions[this.getX() * (2* (this.getX()-x))][this.getY() * (2 * (this.getY() - y))].team != this.team) {
+            if (Math.abs(this.getX()-x) == 2 && gameBoard.boardPositions[this.getX() * (2* (this.getX()-x))][this.getY() * (2 * (this.getY() - y))].team != this.team
+                    && gameBoard.boardPositions[x][y] == null) {
                 return true;
             }
         } else {
             if (team == Constants.TeamId.team1Id) {
                 if ((getY() - y) > 0) {
+                    if (Math.abs(y-getY()) ==  2|| Math.abs(x-getX()) == 2) {
+                        if (gameBoard.boardPositions[(this.getX() + x)/2][(this.getY() + y)/2] != null) return true;
+
+                        return false;
+                    }
+                    if (!(Math.abs(y - getY()) == 1) || !(Math.abs(x - getX()) == 1)) return false;
+                    if (board.boardPositions[x][y] == null) return true;
                     if (board.boardPositions[x][y] == null && Math.abs(getY()-y) == 1 && Math.abs(getX()-x) == 1) {
                         return true;
                     }
                     if (board.boardPositions[x][y].team == this.team) {
                         return false;
                     }
-                    if (Math.abs(this.getX()-x) == 2 && gameBoard.boardPositions[this.getX() * (2* (this.getX()-x))][this.getY() * (2 * (this.getY() - y))].team != this.team) {
+                    if (Math.abs(this.getX()-x) == 2 && gameBoard.boardPositions[this.getX() * (2* (this.getX()-x))][this.getY() * (2 * (this.getY() - y))].team != this.team
+                            && gameBoard.boardPositions[x][y] == null) {
                         return true;
                     }
                 }
             } else {
                 if ((getY() - y) < 0) {
+                    if (Math.abs(y-getY()) ==  2|| Math.abs(x-getX()) == 2) {
+                        if (gameBoard.boardPositions[(this.getX() + x)/2][(this.getY() + y)/2] != null) return true;
+
+                        return false;
+                    }
+                    if (!(Math.abs(y - getY()) == 1) || !(Math.abs(x - getX()) == 1)) return false;
+                    if (board.boardPositions[x][y] == null) return true;
                     if (board.boardPositions[x][y] == null && Math.abs(getY()-y) == 1 && Math.abs(getX()-x) == 1) {
                         return true;
                     }
                     if (board.boardPositions[x][y].team == this.team) {
                         return false;
                     }
-                    if (Math.abs(this.getX()-x) == 2 && gameBoard.boardPositions[this.getX() * (2* (this.getX()-x))][this.getY() * (2 * (this.getY() - y))].team != this.team) {
+                    if (Math.abs(this.getX()-x) == 2 && gameBoard.boardPositions[this.getX() * (2* (this.getX()-x))][this.getY() * (2 * (this.getY() - y))].team != this.team
+                            && gameBoard.boardPositions[x][y] == null) {
                         return true;
                     }
                 }
@@ -164,6 +181,7 @@ public class CheckersPiece extends Piece {
 
         return false;
     }
+
 
     public boolean move(int x, int y, CheckersBoard board) {
         /**
@@ -217,6 +235,12 @@ public class CheckersPiece extends Piece {
             gameBoard.startTimer();
         }
         //setUpUI(gameBoard);
+        if (getY() == 7 && team == Constants.TeamId.team2Id) {
+            board.crown(this);
+        }
+        if (getY() == 0 && team == Constants.TeamId.team1Id) {
+            board.crown(this);
+        }
         return possible(x, y, gameBoard);
     }
     public void setUpUI(CheckersBoard checkersBoard) {
