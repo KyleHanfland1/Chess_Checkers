@@ -1,5 +1,6 @@
 package com.example.chesscheckers;
 
+import android.app.Activity;
 import android.util.DisplayMetrics;
 import android.widget.ImageView;
 
@@ -10,13 +11,18 @@ public final class AreaDivider {
     /**
      * grab the imageView of the board
      */
-    private ImageView imageBoard = MainActivity.checkersboard;
-    private int height = imageBoard.getHeight();
-    private int width = imageBoard.getWidth();
-    private int xCellSize = width/8;
-    private int yCellSize = height/8;
-    public AreaDivider(CheckersBoard b) {
+    private ImageView imageBoard;
+    private int height;
+    private int width;
+    private int xCellSize;
+    private int yCellSize;
+    public AreaDivider(CheckersBoard b, Activity a) {
         CheckersBoard board = b;
+        imageBoard = a.findViewById(R.id.checkerBoard);
+        height = imageBoard.getHeight();
+        width = imageBoard.getWidth();
+        xCellSize = 1080/8;
+        yCellSize = 1080/8;
     }
 
     /**
@@ -24,11 +30,17 @@ public final class AreaDivider {
      *  dp = px / (dpi / 160)
      *  densityFactor = dpi/160
      *  xcellsize = board.getWidth() will return pixels (i believe then use conversion above)
-     *  y cell size = ImageView board.getHieght() (Once again in pixels)
+     *  y cell size = ImageView board.getHeight() (Once again in pixels)
      *  Important because this allows for no magic numbers aka accounts for different screen sizes
      *  on launch
      * @return
      */
+    public int xcoordToBoard(int x) {
+        return x*xCellSize;
+    }
+    public int ycoordToBoard(int y) {
+        return y*yCellSize;
+    }
     public int getXCoordinateFromBoard(int pixel) {
         return (int) Math.floor(pixel/xCellSize);
     }
@@ -40,5 +52,3 @@ public final class AreaDivider {
     }
 
 }
-
-

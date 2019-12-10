@@ -4,43 +4,49 @@ import android.os.Bundle;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;1
+import androidx.constraintlayout.widget.ConstraintLayout;
 
-    //public void highlightPiece(Piece a) {
-        /**
-         * passed an object or piece (preferably the latter)
-         * and fills that square another color to indicate selection
-         * then highlights all moves in the getAllMoves() function of the piece
-         * subclasses
-         */
+//public void highlightPiece(Piece a) {
+/**
+ * passed an object or piece (preferably the latter)
+ * and fills that square another color to indicate selection
+ * then highlights all moves in the getAllMoves() function of the piece
+ * subclasses
+ */
 
-    //}
+//}
 public class CheckersActivity extends AppCompatActivity {
 
     public static CheckersBoard gameBoard;
+
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.board);
         gameBoard = new CheckersBoard(this);
-        setUpUI(gameBoard);
-
+        try {
+            setUpUI(gameBoard);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            throw(e);
         }
+    }
 
-
-
-
-
-        public void setUpUI(CheckersBoard checkersBoard) {
+    public void setUpUI(CheckersBoard checkersBoard) {
         ConstraintLayout gridLayout = findViewById(R.id.gridLayout);
-            for (int i = 0; i < checkersBoard.boardPositions.length; i++) {
-                for (int j = 0; i < checkersBoard.boardPositions[i].length; j++){
-                    if (checkersBoard.boardPositions[i][j] != null)
-                    gridLayout.addView(new ImageView(this))
-                    if (Constants.TeamId)
-                        //make the image, pick its team, add to constraint layout, clone constraint layout into constraint set, do constraint stuff
-                        // go on stack:how to set layout constraint right to right of parent
-                        // point of doing this: even after first moving pieces will be constrained to image of board, otherwise theyll all stick to top left corner of board
-                        // create on click listener on each image view, so when u click it, so u can then find out where u can move that piece
+        ImageView board = gridLayout.findViewById(R.id.checkerBoard);
+        board.setX(board.getWidth());
+        board.setY(board.getHeight());
+        for (int i = 0; i < checkersBoard.boardPositions.length; i++) {
+            for (int j = 0; j < checkersBoard.boardPositions[i].length; j++){
+                if (checkersBoard.boardPositions[i][j] != null){
+                    checkersBoard.boardPositions[i][j].imageView.setX((float) 142*i + checkersBoard.boardPositions[i][j].imageView.getWidth());
+                    checkersBoard.boardPositions[i][j].imageView.setY((float) 142*j + checkersBoard.boardPositions[i][j].imageView.getHeight());
+                    System.out.println("X: " + checkersBoard.boardPositions[i][j].imageView.getX()  + " Y: " + checkersBoard.boardPositions[i][j].imageView.getY());
+                }
+                //make the image, pick its team, add to constraint layout, clone constraint layout into constraint set, do constraint stuff
+                // go on stack:how to set layout constraint right to right of parent
+                // point of doing this: even after first moving pieces will be constrained to image of board, otherwise theyll all stick to top left corner of board
+                // create on click listener on each image view, so when u click it, so u can then find out where u can move that piece
 
             }
         }

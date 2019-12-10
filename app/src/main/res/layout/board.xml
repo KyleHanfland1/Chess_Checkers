@@ -9,6 +9,11 @@
         android:id="@+id/gridLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
         android:background="#FFFFFF">
 
         <TextView
@@ -25,18 +30,11 @@
 
         <ImageView
             android:id="@+id/checkerBoard"
-            android:layout_width="410dp"
-            android:layout_height="488dp"
-            android:adjustViewBounds="false"
-            android:cropToPadding="false"
-            android:onClick="boardClicked"
-            app:layout_column="0"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_row="0"
-            app:srcCompat="@drawable/checker" />
+            android:layout_width="409dp"
+            android:layout_height="414dp"
+            app:srcCompat="@drawable/checker"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
 
         <ImageView
             android:id="@+id/wp9"
@@ -232,7 +230,7 @@
             android:layout_height="49dp"
             app:srcCompat="@drawable/whitepieceblackbad"
             tools:layout_editor_absoluteX="5dp"
-            tools:layout_editor_absoluteY="39dp" />
+            tools:layout_editor_absoluteY="0dp" />
 
         <ImageView
             android:id="@+id/wp8"
