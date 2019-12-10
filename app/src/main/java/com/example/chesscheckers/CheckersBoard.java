@@ -20,18 +20,18 @@ public class CheckersBoard extends Board {
         /**
          * black piece setup
          */
-        boardPositions[0][1] = new CheckersPiece(0, 1, 5, a.findViewById(R.id.bp5));
-        boardPositions[0][3] = new CheckersPiece(0, 3 , 5, a.findViewById(R.id.bp3));
-        boardPositions[0][5] = new CheckersPiece(0, 5 , 5, a.findViewById(R.id.bp2));
-        boardPositions[0][7] = new CheckersPiece(0, 7 , 5, a.findViewById(R.id.bp9));
-        boardPositions[2][1] = new CheckersPiece(0, 0, 6, a.findViewById(R.id.bp12));
-        boardPositions[2][3] = new CheckersPiece(0, 2, 6, a.findViewById(R.id.bp8));
-        boardPositions[2][5] = new CheckersPiece(0, 4, 6, a.findViewById(R.id.bp6));
-        boardPositions[2][7] = new CheckersPiece(0, 6, 6, a.findViewById(R.id.bp));
-        boardPositions[1][0] = new CheckersPiece(0, 1, 7, a.findViewById(R.id.bp7));
-        boardPositions[1][2] = new CheckersPiece(0, 3, 7, a.findViewById(R.id.bp10));
-        boardPositions[1][4] = new CheckersPiece(0, 5, 7, a.findViewById(R.id.bp4));
-        boardPositions[1][6] = new CheckersPiece(0, 7, 7, a.findViewById(R.id.bp11));
+        boardPositions[1][5] = new CheckersPiece(0, 1, 5, a.findViewById(R.id.bp5));
+        boardPositions[3][5] = new CheckersPiece(0, 3 , 5, a.findViewById(R.id.bp3));
+        boardPositions[5][5] = new CheckersPiece(0, 5 , 5, a.findViewById(R.id.bp2));
+        boardPositions[7][5] = new CheckersPiece(0, 7 , 5, a.findViewById(R.id.bp9));
+        boardPositions[0][6] = new CheckersPiece(0, 0, 6, a.findViewById(R.id.bp12));
+        boardPositions[2][6] = new CheckersPiece(0, 2, 6, a.findViewById(R.id.bp8));
+        boardPositions[4][6] = new CheckersPiece(0, 4, 6, a.findViewById(R.id.bp6));
+        boardPositions[6][6] = new CheckersPiece(0, 6, 6, a.findViewById(R.id.bp));
+        boardPositions[1][7] = new CheckersPiece(0, 1, 7, a.findViewById(R.id.bp7));
+        boardPositions[3][7] = new CheckersPiece(0, 3, 7, a.findViewById(R.id.bp10));
+        boardPositions[5][7] = new CheckersPiece(0, 5, 7, a.findViewById(R.id.bp4));
+        boardPositions[7][7] = new CheckersPiece(0, 7, 7, a.findViewById(R.id.bp11));
         /**
          * white piece setup
          */
