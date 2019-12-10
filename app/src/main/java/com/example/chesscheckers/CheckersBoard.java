@@ -84,9 +84,9 @@ public class CheckersBoard extends Board {
                 int ytouch = (int) ad.getYCoordinateFromBoard((int) event.getY());
                 System.out.println(Math.floor((float)xtouch/(float)1600 * 1000));
                 System.out.println(Math.floor((float)ytouch/(float)700 * 1000));
-
-                selectedPiece.move(xtouch, ytouch, me);
-
+                if (selectedPiece != null) {
+                    selectedPiece.move(xtouch, ytouch, me);
+                }
                 return false;
             }
         });

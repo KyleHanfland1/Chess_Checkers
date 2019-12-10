@@ -124,21 +124,48 @@ public class CheckersPiece extends Piece {
     }
 
     public boolean possible(int x, int y, CheckersBoard board) {
-        if (board.boardPositions[x][y] == null && Math.abs(getX()-x)==1 && Math.abs(getY()-y)==1) {
-            return true;
-        }
-        if (board.boardPositions[x][y].team == this.team) {
-            return false;
-        }
-        if (Math.abs(this.getX()-x) == 2 && gameBoard.boardPositions[this.getX() * (2* (this.getX()-x))][this.getY() * (2 * (this.getY() - y))].team != this.team) {
-            return true;
+        if (crowned) {
+            if (board.boardPositions[x][y] == null && Math.abs(getY()-y) == 1 && Math.abs(getX()-x) == 1) {
+                return true;
+            }
+            if (board.boardPositions[x][y].team == this.team) {
+                return false;
+            }
+            if (Math.abs(this.getX()-x) == 2 && gameBoard.boardPositions[this.getX() * (2* (this.getX()-x))][this.getY() * (2 * (this.getY() - y))].team != this.team) {
+                return true;
+            }
+        } else {
+            if (team == Constants.TeamId.team1Id) {
+                if ((getY() - y) > 0) {
+                    if (board.boardPositions[x][y] == null && Math.abs(getY()-y) == 1 && Math.abs(getX()-x) == 1) {
+                        return true;
+                    }
+                    if (board.boardPositions[x][y].team == this.team) {
+                        return false;
+                    }
+                    if (Math.abs(this.getX()-x) == 2 && gameBoard.boardPositions[this.getX() * (2* (this.getX()-x))][this.getY() * (2 * (this.getY() - y))].team != this.team) {
+                        return true;
+                    }
+                }
+            } else {
+                if ((getY() - y) < 0) {
+                    if (board.boardPositions[x][y] == null && Math.abs(getY()-y) == 1 && Math.abs(getX()-x) == 1) {
+                        return true;
+                    }
+                    if (board.boardPositions[x][y].team == this.team) {
+                        return false;
+                    }
+                    if (Math.abs(this.getX()-x) == 2 && gameBoard.boardPositions[this.getX() * (2* (this.getX()-x))][this.getY() * (2 * (this.getY() - y))].team != this.team) {
+                        return true;
+                    }
+                }
+            }
         }
 
         return false;
     }
 
     public boolean move(int x, int y, CheckersBoard board) {
-        boolean possible = false;
         /**
          * passed the x - y coords of a click/tap
          * first make sure move is in the list of possible moves
@@ -148,12 +175,6 @@ public class CheckersPiece extends Piece {
         }
         if (whiteTurn == false && team == Constants.TeamId.team2Id) {
             return false;
-        }
-        for (int i = 0; i < getAllMoves().size(); i++) {
-            if (new int[] {x, y}.equals(getAllMoves().get(i))) {
-                possible = true;
-            }
-
         }
         /**
          * then change the x - y coords of the piece
@@ -171,8 +192,15 @@ public class CheckersPiece extends Piece {
             CheckersPiece temp = gameBoard.boardPositions[getX()][getY()];
             gameBoard.boardPositions[getX()][getY()] = null;
             gameBoard.boardPositions[x][y] = temp;
+            if (gameBoard.boardPositions[(this.getX() + x)/2][(this.getY() + y)/2] != null) {
+                System.out.println("Here");
+                if (gameBoard.boardPositions[(this.getX() + x)/2][(this.getY() + y)/2].team != this.team) {
+                    gameBoard.boardPositions[(this.getX() + x)/2][(this.getY() + y)/2].imageView.setVisibility(View.GONE);
+                    gameBoard.boardPositions[(this.getX() + x)/2][(this.getY() + y)/2] = null;
+                }
+            }
             this.setX(x);
-            this.setY(y);
+            this.setY(y);/*
             if (Math.abs(changex) == 2) {
                 gameBoard.boardPositions[x + (changex/2)][y + (changey/2)] = null;
                 if (team == Constants.TeamId.team1Id) {
@@ -180,8 +208,8 @@ public class CheckersPiece extends Piece {
                 } else if (team == Constants.TeamId.team2Id) {
                     board.numPieces0--;
                 }
-            }
-            System.out.println(142*x + " " + 142*y);
+            }*/
+
             gameBoard.boardPositions[x][y].imageView.setX(142*x);
             gameBoard.boardPositions[x][y].imageView.setY(142*y);
             // flips after move is
