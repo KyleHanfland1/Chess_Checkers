@@ -21,7 +21,7 @@ public class CheckersActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.board);
-        gameBoard = new CheckersBoard();
+        gameBoard = new CheckersBoard(this);
         setUpUI(gameBoard);
 
         }

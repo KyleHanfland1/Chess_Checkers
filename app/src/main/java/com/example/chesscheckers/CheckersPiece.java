@@ -1,5 +1,6 @@
 package com.example.chesscheckers;
 
+import android.view.View;
 import android.widget.ImageView;
 
 import java.sql.SQLOutput;
@@ -10,8 +11,8 @@ import static com.example.chesscheckers.CheckersActivity.gameBoard;
 
 public class CheckersPiece extends Piece {
     public boolean crowned = false;
-    public ImageView imageView;
-    public CheckersPiece(int teamId, int x, int y, ImageView i) {
+    public View imageView;
+    public CheckersPiece(int teamId, int x, int y, View i) {
         team = teamId;
         this.setX(x);
         this.setY(y);
